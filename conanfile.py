@@ -30,11 +30,11 @@ class PcapplusplusConan(ConanFile):
             #env_build.make()' -I="%s"' % include_path
             build_flags = '-I%s' % include_path
             build_flags += ' -L%s' % lib_path
-	    self.run("make -e PCAPPP_BUILD_FLAGS='%s'" % build_flags)
+	    self.run("make -e PCAPPP_BUILD_FLAGS='%s' libs -j5" % build_flags)
 
 
     def package(self):
-        self.copy("*.h", dst="include", src="PcapPlusPlus")
+        self.copy("*.h", dst="include", src="Dist/header")
         self.copy("*hello.lib", dst="lib", keep_path=False)
         self.copy("*.dll", dst="bin", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)
@@ -42,5 +42,5 @@ class PcapplusplusConan(ConanFile):
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        #self.cpp_info.libs = ["PcapPlusPlus"]
+        self.cpp_info.includedirs = ["include"]
         self.cpp_info.libs = tools.collect_libs(self)
