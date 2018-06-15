@@ -21,5 +21,6 @@ fi
 
 pip install conan --upgrade
 pip install conan_package_tools
+conan remote add conan-transit https://conan-transit.bintray.com
 
 conan user
