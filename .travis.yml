@@ -10,7 +10,7 @@ linux: &linux
    os: linux
    sudo: required
    language: python
-   python: "2.7"
+   python: "3.6"
    services:
      - docker
 osx: &osx
