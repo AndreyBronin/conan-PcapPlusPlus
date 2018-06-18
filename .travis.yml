@@ -1,11 +1,3 @@
-
-env:
-   global:
-     - CONAN_REFERENCE: "PcapPlusPlus/v17.11"
-     - CONAN_USERNAME: "andreybronin"
-     - CONAN_LOGIN_USERNAME: "andreybronin"
-     - CONAN_CHANNEL: "testing"
-     
 linux: &linux
    os: linux
    sudo: required
