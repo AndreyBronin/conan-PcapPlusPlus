@@ -10,5 +10,5 @@ if [[ "$(uname -s)" == 'Darwin' ]]; then
     pyenv activate conan
 fi
 
-conan remote update conan-transit https://conan-transit.bintray.com
+
 python build.py
