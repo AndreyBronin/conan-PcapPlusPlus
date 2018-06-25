@@ -23,10 +23,14 @@ class PcapplusplusConan(ConanFile):
                 self.run("./configure-linux.sh --default")
             elif self.settings.os == "Macos":
                 self.run("./configure-mac_os_x.sh --default")
+            elif self.settings.os == "Windows":
+                raise ConanException("Windows is not supported yet")
+            else:
+                raise ConanException("%s is not supported" % self.settings.os)
 
             build_flags = '-I%s' % include_path
             build_flags += ' -L%s' % lib_path
-            self.run("make -e PCAPPP_BUILD_FLAGS='%s' libs" % build_flags)
+            self.run("make -e PCAPPP_BUILD_FLAGS='%s' libs -j5" % build_flags)
 
     def package(self):
         self.copy("*.h", dst="include", src="PcapPlusPlus/Dist/header")
