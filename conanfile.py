@@ -8,7 +8,7 @@ class PcapplusplusConan(ConanFile):
     description = "Conan package for PcapPlusPlus"
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake"
-    requires = "libpcap/1.8.1@uilianries/stable"
+    requires = "libpcap/1.9.0@andreybronin/testing"
 
     def source(self):
         #git = tools.Git(folder="PcapPlusPlus")
@@ -38,4 +38,4 @@ class PcapplusplusConan(ConanFile):
 
     def package_info(self):
         self.cpp_info.libs = ["Packet++", "Pcap++", "Common++"]
-        #self.cpp_info.libs = tools.collect_libs(self)
+
