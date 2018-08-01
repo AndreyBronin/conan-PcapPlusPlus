@@ -7,14 +7,13 @@
 ## conan-PcapPlusPlus
 
 Conan package for [PcapPlusPlus](https://github.com/seladb/PcapPlusPlus)
-Package depends on [conan-libpcap](https://github.com/uilianries/conan-libpcap) from [conan-transit](https://bintray.com/conan/conan-transit)
+Package depends on [conan-libpcap](https://github.com/andreybronin/conan-libpcap) from [Bintray repo](https://api.bintray.com/conan/andreybronin/conan)
 
 ## Project setup
 
-Add remote repos
+Add remote repo
 
 ```
-conan remote add conan-transit https://conan-transit.bintray.com
 conan remote add andreybronin https://api.bintray.com/conan/andreybronin/conan
 ```
 
