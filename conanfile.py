@@ -2,7 +2,7 @@ from conans import ConanFile, AutoToolsBuildEnvironment, tools
 
 class PcapplusplusConan(ConanFile):
     name = "PcapPlusPlus"
-    version = "latest"
+    version = "v18.08"
     license = "Apache 2.0"
     url = "https://github.com/AndreyBronin/conan-PcapPlusPlus"
     description = "Conan package for PcapPlusPlus"
@@ -12,7 +12,7 @@ class PcapplusplusConan(ConanFile):
 
     def source(self):
         #git = tools.Git(folder="PcapPlusPlus")
-        self.run("git clone --depth 1 https://github.com/seladb/PcapPlusPlus.git")
+        self.run("git clone --branch v18.08 --depth 1 https://github.com/seladb/PcapPlusPlus.git")
 
     def build(self):
         libpcap_info = self.deps_cpp_info["libpcap"]

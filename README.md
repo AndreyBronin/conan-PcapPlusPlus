@@ -22,7 +22,7 @@ Use in conanfile.txt
 
 ```
 [requires]
-PcapPlusPlus/latest@andreybronin/stable
+PcapPlusPlus/v18.08@andreybronin/stable
 
 [options]
 libpcap:shared=False
