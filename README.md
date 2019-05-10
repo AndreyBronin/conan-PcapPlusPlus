@@ -1,5 +1,9 @@
 ## Package Status
 
+:warning: WARNING! This conan recipe is deprecated, please use Bincrafters version https://github.com/bincrafters/conan-pcapplusplus 
+
+
+
 | Bintray | Travis CI |
 |:--------:|:-----------------:|
 |[![Download](https://api.bintray.com/packages/andreybronin/conan/PcapPlusPlus%3Aandreybronin/images/download.svg) ](https://bintray.com/andreybronin/conan/PcapPlusPlus%3Aandreybronin/_latestVersion)|[![Build Status](https://travis-ci.org/AndreyBronin/conan-PcapPlusPlus.svg?branch=master)](https://travis-ci.org/AndreyBronin/conan-PcapPlusPlus)|
